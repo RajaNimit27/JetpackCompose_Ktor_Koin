@@ -18,8 +18,6 @@ class Repository(private val remoteDataSource: RemoteDataSource) {
         return toResultFlow(context){
             remoteDataSource.getReceipesDetail(id)
         }
-
-
     }
 
 }

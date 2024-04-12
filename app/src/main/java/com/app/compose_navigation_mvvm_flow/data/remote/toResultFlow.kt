@@ -17,7 +17,6 @@ fun <T> toResultFlow(context: Context, call: suspend () -> T?) : Flow<UiState<T?
             val c = call.invoke()
             c.let { response ->
                 try {
-                    println("response${response}")
                     emit(UiState.Success(response))
                 } catch (e: Exception) {
                     emit(UiState.Error(e.toString()))

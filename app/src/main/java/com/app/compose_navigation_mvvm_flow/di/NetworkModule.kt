@@ -33,13 +33,11 @@ val networkModule = module {
                 }
                 level = LogLevel.ALL
             }
-
             install(ResponseObserver) {
                 onResponse { response ->
                     Log.d("HTTP status:", "${response.status.value}")
                 }
             }
-
             install(DefaultRequest) {
                 header(HttpHeaders.ContentType, ContentType.Application.Json)
             }
