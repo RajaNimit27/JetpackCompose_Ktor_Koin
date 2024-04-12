@@ -66,6 +66,7 @@ fun RecipeDetailScreen(navController: NavController, mainViewModel: MainViewMode
                 is UiState.Error -> {
                     ProgressLoader(isLoading = false)
                     //Handle Error
+                    SimpleAlertDialog(message =  ((state.value as UiState.Error<Receipes>).message))
                 }
             }
         }

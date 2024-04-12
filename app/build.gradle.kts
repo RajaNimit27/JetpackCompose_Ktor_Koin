@@ -31,20 +31,25 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures{
         dataBinding = true
         compose = true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.3"
     }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -96,11 +101,6 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$coroutine_version")
 
-    //Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
-    implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
-    implementation ("com.squareup.okhttp3:logging-interceptor:4.12.0")
-    implementation ("com.squareup.retrofit2:converter-scalars:$retrofit_version")
 
     //Compose Navigation
     implementation ("androidx.navigation:navigation-compose:2.7.7")
@@ -108,7 +108,7 @@ dependencies {
     //Koil Image Dependency
     implementation("io.coil-kt:coil-compose:2.4.0")
 
-    //Ktor
+    //Ktor & kotlin Serialization
     implementation("io.ktor:ktor-client-android:2.3.10")
     implementation("io.ktor:ktor-client-serialization:2.3.10")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
