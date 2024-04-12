@@ -11,7 +11,7 @@ open class BaseViewModel(application: Application) : AndroidViewModel(applicatio
   protected val context
     get() = getApplication<Application>()
 
-  suspend fun <T> fetchData(apiCall: suspend () -> Flow<UiState<T?>>, uiStateFlow: MutableStateFlow<UiState<T?>>) {
+  suspend fun <T> fetchData(uiStateFlow: MutableStateFlow<UiState<T?>>, apiCall: suspend () -> Flow<UiState<T?>>) {
       uiStateFlow.value = UiState.Loading
     try {
        apiCall().collect {

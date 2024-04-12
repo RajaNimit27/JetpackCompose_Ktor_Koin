@@ -21,10 +21,10 @@ class MainViewModel(private val repository: Repository, application: Application
 
 
     fun getReceipesList() = viewModelScope.launch {
-        fetchData({ repository.getReceipes(context) }, _uiStateReceipeList)
+        fetchData(_uiStateReceipeList) { repository.getReceipes(context) }
     }
 
     fun getReceipeDetail(id: Int?) = viewModelScope.launch {
-        fetchData({ repository.getReceipesDetail(context, id) }, _uiStateReceipeDetail)
+        fetchData(_uiStateReceipeDetail,) { repository.getReceipesDetail(context, id) }
     }
 }
