@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Koin_StateFlow_Retrofit</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
