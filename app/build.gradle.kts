@@ -71,9 +71,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     val lifecycle_version ="2.6.2"
-    val retrofit_version ="2.9.0"
     val coroutine_version="1.7.3"
-    val room_version = "2.6.1"
     val koin_version="3.4.0"
 
     implementation("androidx.core:core-ktx:1.12.0")
